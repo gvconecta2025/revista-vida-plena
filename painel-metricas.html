@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Métricas - Vida Plena</title>
+    <style>
+        :root { --primary: #4b5320; --bg: #f8fafc; --text: #334155; --border: #e2e8f0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: var(--bg); color: var(--text); padding: 40px 20px; }
+        .dashboard-container { max-width: 1200px; margin: 0 auto; }
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; border-bottom: 2px solid var(--border); padding-bottom: 20px; }
+        .header h1 { color: var(--primary); margin: 0; }
+        .btn-refresh { background-color: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; }
+        .btn-refresh:hover { background-color: #3a4119; }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background-color: #f1f5f9; font-weight: 700; color: var(--primary); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
+        tr:hover { background-color: #f8fafc; }
+        .badge { background: #e0f2fe; color: #0284c7; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
+        .badge.success { background: #dcfce7; color: #16a34a; }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <div class="header">
+            <h1>📡 Radar Dark Social - Vida Plena</h1>
+            <button class="btn-refresh" onclick="location.reload()">Atualizar Dados</button>
+        </div>
+
+        <table id="metrics-table">
+            <thead>
+                <tr>
+                    <th>Artigo (Slug)</th>
+                    <th>Cliques (Views)</th>
+                    <th>Leituras Reais (>4s)</th>
+                    <th>Chegou na Metade</th>
+                    <th>Leu Tudo (100%)</th>
+                    <th>Cliques WhatsApp</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr><td colspan="6" style="text-align: center;">Carregando métricas do Firebase...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getFirestore, collection, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+        // Cole aqui as MESMAS credenciais que você usou no metrics.js
+        const firebaseConfig = {
+            apiKey: "SUA_API_KEY_AQUI",
+            authDomain: "seu-projeto-vida-plena.firebaseapp.com",
+            projectId: "seu-projeto-vida-plena"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        async function carregarMetricas() {
+            const tbody = document.getElementById('table-body');
+            try {
+                const q = query(collection(db, "analytics"), orderBy("total_views", "desc"));
+                const querySnapshot = await getDocs(q);
+                
+                tbody.innerHTML = '';
+                
+                querySnapshot.forEach((doc) => {
+                    const data = doc.data();
+                    const tr = document.createElement('tr');
+                    
+                    // Cálculo de Conversão de Leitura
+                    const retencao = data.total_views > 0 ? Math.round((data.valid_views / data.total_views) * 100) : 0;
+                    
+                    tr.innerHTML = `
+                        <td><strong>${data.slug}</strong></td>
+                        <td>${data.total_views || 0}</td>
+                        <td><span class="badge ${retencao > 50 ? 'success' : ''}">${data.valid_views || 0} (${retencao}%)</span></td>
+                        <td>${data.read_50 || 0}</td>
+                        <td><span class="badge">${data.read_100 || 0}</span></td>
+                        <td><strong>${(data.clicks_wa || 0) + (data.clicks_vip || 0)}</strong></td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            } catch (error) {
+                console.error("Erro ao buscar métricas:", error);
+                tbody.innerHTML = `<tr><td colspan="6" style="color: red; text-align: center;">Erro ao conectar com o banco de dados. Verifique as credenciais.</td></tr>`;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', carregarMetricas);
+    </script>
+</body>
+</html>
