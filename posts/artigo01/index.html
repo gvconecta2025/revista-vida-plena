@@ -26,7 +26,7 @@
         }
         .bottom-sheet {
             position: fixed; bottom: 0; left: 50%; transform: translateX(-50%) translateY(100%);
-            width: 100%; max-width: var(--container-width); height: 83vh;
+            width: 100%; max-width: var(--container-width); height: 85vh;
             background: #ffffff; border-radius: 24px 24px 0 0;
             box-shadow: 0 -10px 40px rgba(0,0,0,0.15); z-index: 1000;
             transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
@@ -51,11 +51,12 @@
         .sheet-book-cover { width: 160px; border-radius: 6px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); flex-shrink: 0; }
         .sheet-book-info h3 { font-family: var(--font-heading); color: var(--primary); font-size: 1.5rem; margin-bottom: 10px; line-height: 1.3; }
         .sheet-book-info p { font-size: 0.95rem; color: #334155; line-height: 1.6; margin-bottom: 15px; }
-        .sheet-actions { display: flex; flex-direction: column; gap: 12px; margin-top: 25px; width: 100%; }
+        .promo-alert { background-color: #fefce8; border: 1px dashed #eab308; padding: 12px; border-radius: 8px; color: #854d0e; font-size: 0.9rem; margin-bottom: 15px; font-weight: 500; }
+        .sheet-actions { display: flex; flex-direction: column; gap: 12px; margin-top: 15px; width: 100%; }
         @media (min-width: 480px) { .sheet-actions { flex-direction: row; } }
         .btn-sheet-buy {
             flex: 1; text-align: center; padding: 14px 20px; border-radius: 8px;
-            font-weight: bold; font-size: 0.95rem; transition: background 0.2s; display: block;
+            font-weight: bold; font-size: 0.95rem; transition: background 0.2s; display: block; text-decoration: none;
         }
         .btn-sheet-physical { background: var(--accent); color: white; }
         .btn-sheet-physical:hover { background: #702f23; color: white; }
@@ -69,7 +70,7 @@
         <div class="magazine-container-nav">
             <a href="../../index.html" class="magazine-logo">Vida<span>Plena</span></a>
             <div class="share-header-buttons">
-                <a href="https://chat.whatsapp.com/SEU_LINK_DO_GRUPO" target="_blank" class="btn-group-wa">
+                <a href="https://chat.whatsapp.com/F32LNqupYek4I6FGp031vS" target="_blank" class="btn-group-wa">
                     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
                     Receber Artigos
                 </a>
@@ -91,7 +92,7 @@
         <article class="single-post">
             
             <header class="post-header">
-                <span class="post-category">Família &bull; Princípios</span>
+                <span class="post-category">Família &bull; Princípios Cristãos</span>
                 <h1 class="post-title">O silêncio que destrói lares: Por que não sabemos mais conversar com nossos filhos?</h1>
                 <p class="post-subtitle">Em um mundo repleto de notificações e telas, a verdadeira comunicação dentro de casa está se perdendo. Entenda como resgatar o diálogo e a conexão espiritual com sua casa.</p>
                 
@@ -103,8 +104,7 @@
                     <div class="meta-profile-right" style="display: flex; flex-direction: column; font-size: 0.85rem; line-height: 1.4; color: #64748b;">
                         <div class="meta-row-1" style="font-size: 0.95rem; color: var(--primary); margin-bottom: 2px;">Por <strong>Luiz Henrique Magalhães</strong></div>
                         <div class="meta-row-2">Publicado em: Hoje</div>
-                        <div class="meta-row-3">Leitura: 5 minutes de leitura</div>
-                        <div class="meta-row-4" style="color: #dc2626; font-weight: 700; margin-top: 2px;">Expira em: 48 horas</div>
+                        <div class="meta-row-3" style="font-weight: bold; color: var(--accent);">Tempo estimado: 3 minutos de leitura</div>
                     </div>
                 </div>
             </header>
@@ -119,22 +119,16 @@
                 </blockquote>
 
                 <h2>A Hiperconexão Externa e o Isolamento Interno</h2>
-                <p>A grande ilusão da era digital é acreditar que estamos mais conectados. Na realidade, estamos hiperinformados e profundamente isolados. Quando perguntamos a um filho "Como foi o seu dia?" e recebemos um monossílabo como "Legal", a maioria de nós desiste e volta a olhar para o próprio telefone. Justificamos a falta de persistência dizendo que "é apenas uma fase da adolescência" ou que "os jovens de hoje são naturalmente fechados". No entanto, as Escrituras nos alertavam claramente em Tiago 1:19 sobre o desenho perfeito das nossas relações: todo homem deve ser pronto para ouvir e tardio para falar. O erro crasso que cometemos na liderança do lar é inverter essa ordem divina ou negligenciar ambas as ações de forma sistemática. Nós quase nunca ouvimos nossos filhos para compreendê-los; ouvimos para responder, julgar ou aplicar uma correção imediata.</p>
+                <p>A grande ilusão da era digital é acreditar que estamos mais conectados. Na realidade, estamos hiperinformados e profundamente isolados. Quando perguntamos a um filho "Como foi o seu dia?" e recebemos um monossílabo como "Legal", a maioria de nós desiste e volta a olhar para o próprio telefone. Justificamos a falta de persistência dizendo que "é apenas uma fase da adolescência" ou que "os jovens de hoje são naturalmente fechados". No entanto, os princípios cristãos nos alertam claramente, como no desenho de Tiago 1:19 sobre as nossas relações: todo homem deve ser pronto para ouvir e tardio para falar. O erro crasso que cometemos na liderança do lar é inverter essa ordem divina ou negligenciar ambas as ações de forma sistemática. Nós quase nunca ouvimos nossos filhos para compreendê-los; ouvimos para responder, julgar ou aplicar uma correção imediata.</p>
 
-                <div class="affiliate-ad-container" style="display: none; margin: 30px 0; text-align: center;">
-                    <a href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank" rel="noopener noreferrer" style="display: block; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                        <img src="URL_DA_IMAGEM_DO_PRODUTO" alt="Produto Recomendado" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto; transition: transform 0.3s;">
-                    </a>
-                </div>
-
-                <p>Quando um jovem percebe que qualquer tentativa de abrir o coração resultará incondicionalmente em um sermão automático ou em uma cobrança ríspida, ele calcula o risco e decide que o preço do diálogo é alto demais. Ele se recolhe. Fecha a porta do quarto e tranca a porta da alma. O amadurecimento deles não espera a nossa conveniência; os anos voam e a janela de oportunidade para plantar as sementes da verdade se fecha um pouco a cada dia. É exatamente nesse vácuo de escuta intencional que o mundo encontra sua maior oportunidade de infiltração. Se o seu filho não encontra em casa um ouvido atento, paciente e guiado pelo Espírito Santo, ele buscará essa validação nos algoritmos das redes sociais ou em influenciadores digital. O silêncio que se instala na sua casa não é neutro; ele está sendo preenchido por vozes estranhas que moldam os valores da próxima geração sem que você perceba.</p>
+                <p>Quando um jovem percebe que qualquer tentativa de abrir o coração resultará incondicionalmente em um sermão automático ou em uma cobrança ríspida, ele calcula o risco e decide que o preço do diálogo é alto demais. Ele se recolhe. Fecha a porta do quarto e tranca a porta da alma. O amadurecimento deles não espera a nossa conveniência; os anos voam e a janela de oportunidade para plantar as sementes da verdade se fecha um pouco a cada dia. É exatamente nesse vácuo de escuta intencional que o mundo encontra sua maior oportunidade de infiltração. Se o seu filho não encontra em casa um ouvido atento, paciente e guiado pelo Espírito Santo, ele buscará essa validação nos algoritmos das redes sociais ou em influenciadores digitais. O silêncio que se instala na sua casa não é neutro; ele está sendo preenchido por vozes estranhas que moldam os valores da próxima geração sem que você perceba.</p>
 
                 <div class="callout-box">
                     <p>Ponto de Atenção: O silêncio prolongado entre pais e filhos não significa ausência de conflitos; muitas vezes, significa apenas que o filho desistiu de ser compreendido no único lugar onde deveria ser plenamente aceito.</p>
                 </div>
 
                 <h2>Construindo Pontes onde o Mundo Cavou Abismos</h2>
-                <p>Resgatar a cumplicidade e a autoridade amorosa com os filhos exige método, intencionalidade e submissão ao direcionamento do Espírito Santo. Não podemos competir com o brilho sedutor da tecnologia usando apenas gritos ou proibições cegas. Precisamos construir um ecossistema doméstico onde a conversa em família seja mais atraente do que a distração digital. O primeiro passo prático é o establishment rigoroso de "Zonas de Altar". Determine momentos inegociáveis no dia em que os celulares são completamente proibidos na mesa. O jantar precisa ser blindado. Não use esse momento precioso para cobrar tarefas da escola ou apontar falhas de comportamento; use-o para conhecer a alma do seu filho. Pergunte sobre os seus medos, suas descobertas, ou o que o fez rir hoje. Mostre uma curiosidade genuína por aquilo que habita o universo dele.</p>
+                <p>Resgatar a cumplicidade e a autoridade amorosa com os filhos exige método, intencionalidade e submissão ao direcionamento do Espírito Santo. Não podemos competir com o brilho sedutor da tecnologia usando apenas gritos ou proibições cegas. Precisamos construir um ecossistema doméstico onde a conversa em família seja mais atraente do que a distração digital. O primeiro passo prático é o estabelecimento rigoroso de "Zonas de Altar". Determine momentos inegociáveis no dia em que os celulares são completamente proibidos na mesa. O jantar precisa ser blindado. Não use esse momento precioso para cobrar tarefas da escola ou apontar falhas de comportamento; use-o para conhecer a alma do seu filho. Pergunte sobre os seus medos, suas descobertas, ou o que o fez rir hoje. Mostre uma curiosidade genuína por aquilo que habita o universo dele.</p>
 
                 <p>O segundo caminho fundamental é a prática da "Escuta Validativa". Quando seu filho decidir falar, resista ferozmente à tentação de interrompê-lo para dar uma lição de moral nos primeiros trinta segundos. Deixe-o concluir o raciocínio. Às vezes, o que o jovem precisa não é de uma solução imediata ou de uma fórmula lógica, mas da certeza de que os seus pais são um porto seguro forte o suficiente para suportar o peso das suas frustrações diárias. Por fim, o terceiro alicerce é a "Direção Espiritual Intencional". Ore com o seu filho de forma audível e específica. Quando os filhos escutam seus pais clamando a Deus por suas vidas, detalhando suas qualidades e pedindo sabedoria do alto para guiá-los, as barreiras invisíveis caem por terra. Eles entendem que a liderança do lar não emana de um ego autoritário, mas de um joelho que se dobra com reverência diante do Criador.</p>
 
@@ -145,16 +139,17 @@
             <section class="business-desk">
                 
                 <div class="pitch-box" style="background: linear-gradient(145deg, #4b5320, #2c3113); color: white; padding: 35px 25px; border-radius: 12px; margin-top: 20px; text-align: center; box-shadow: 0 10px 30px rgba(75, 83, 32, 0.15);">
-                    <h2 style="color: #fde68a; margin-top: 0; font-size: 1.6rem; border: none; padding: 0;">Receba o Próximo Artigo em Primeira Mão</h2>
-                    <p style="font-size: 1.05rem; line-height: 1.6; color: #e2e8f0; margin-bottom: 25px;">Nossos ensaios sobre desenvolvimento familiar e princípios milenares não são publicados nas redes sociais. Eles são enviados exclusivamente no nosso grupo fechado de leitores no WhatsApp.</p>
-                    <a href="https://chat.whatsapp.com/SEU_LINK_DO_GRUPO" target="_blank" class="btn-pitch" style="display: inline-block; background: #25D366; color: white; font-weight: 800; font-size: 1.1rem; padding: 15px 30px; border-radius: 50px; text-decoration: none; text-transform: uppercase; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); transition: 0.2s;">Entrar no Grupo de Leitores</a>
+                    <h2 style="color: #fde68a; margin-top: 0; font-size: 1.6rem; border: none; padding: 0;">Participe do Novo Grupo de Leitores</h2>
+                    <p style="font-size: 1.05rem; line-height: 1.6; color: #e2e8f0; margin-bottom: 25px;">Nossos ensaios profundos sobre desenvolvimento familiar e princípios cristãos não são publicados nas redes sociais. Eles são enviados exclusivamente no nosso grupo fechado no WhatsApp.</p>
+                    <a href="https://chat.whatsapp.com/F32LNqupYek4I6FGp031vS" target="_blank" class="btn-pitch" style="display: inline-block; background: #25D366; color: white; font-weight: 800; font-size: 1.1rem; padding: 15px 30px; border-radius: 50px; text-decoration: none; text-transform: uppercase; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); transition: 0.2s;">Entrar no Grupo Oficial</a>
+                    <span style="font-size: 0.85rem; color: #94a3b8; display: block; margin-top: 15px;">🔒 Privacidade Garantida: O grupo é restrito. Apenas administradores enviam mensagens e seu número fica oculto para os demais participantes.</span>
                 </div>
 
                 <div class="book-promo-card" style="background: #ffffff; border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-top: 30px; display: flex; gap: 20px; align-items: center; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
-                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=1974&auto=format&fit=crop" style="width: 75px; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" alt="Capa Livro">
+                    <img src="../../img/dinheiro-com-proposito.png" style="width: 75px; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" alt="Capa Livro Dinheiro com Propósito">
                     <div style="flex-grow: 1;">
-                        <h4 style="font-family: var(--font-heading); color: var(--primary); font-size: 1.15rem; margin-bottom: 4px;">Obra em Destaque: Desenvolvimento Sistemático</h4>
-                        <p style="font-size: 0.9rem; color: #475569; margin-bottom: 12px; line-height: 1.4;">Construa as bases necessárias para que seus filhos conquistem maturidade, foco e independência sob princípios eternos.</p>
+                        <h4 style="font-family: var(--font-heading); color: var(--primary); font-size: 1.15rem; margin-bottom: 4px;">Obra em Destaque: Dinheiro com Propósito</h4>
+                        <p style="font-size: 0.9rem; color: #475569; margin-bottom: 12px; line-height: 1.4;">A ansiedade não é falta de dinheiro, é falta de método. Descubra o mapa lógico para tirar sua vida financeira do improviso e alcançar a estabilidade.</p>
                         <button onclick="openBookSheet()" style="background: var(--primary); color: white; border: none; padding: 8px 16px; font-weight: bold; border-radius: 6px; font-size: 0.85rem; cursor: pointer; transition: background 0.2s;">Conhecer Obra</button>
                     </div>
                 </div>
@@ -163,10 +158,10 @@
                     <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop" class="author-bio-img" alt="Luiz Henrique Magalhães">
                     <div class="author-bio-content">
                         <h4>Quem é o Autor</h4>
-                        <p>Sou o Professor Luiz Henrique Magalhães, escritor e estudioso da teologia. Escrevo com profundidade baseado em princípios milenares e estudos aplicados à família, trazendo um direcionamento firme, acolhedor e guiado pelo Espírito Santo para lidar com as angústias modernas da sua casa.</p>
+                        <p>Sou o Professor Luiz Henrique Magalhães, especialista em matemática e desenvolvimento sistemático, escritor e estudioso da teologia. Escrevo com profundidade baseado em princípios cristãos, trazendo um direcionamento firme, lógico e acolhedor para lidar com as angústias modernas da sua casa e das suas finanças.</p>
                         <a href="https://wa.me/5533999333644?text=Olá%20Professor%20Luiz,%20li%20o%20artigo%20sobre%20o%20silêncio%20nos%20lares%20e%20gostaria%20de%20conversar." target="_blank" class="author-whatsapp-btn">
                             <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-                            Chamar no WhatsApp
+                            Falar com o Autor
                         </a>
                     </div>
                 </div>
@@ -187,15 +182,19 @@
         </div>
         <div class="sheet-content">
             <div class="sheet-book-layout">
-                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=1974&auto=format&fit=crop" class="sheet-book-cover" alt="Livro Desenvolvimento Sistemático">
+                <img src="../../img/dinheiro-com-proposito.png" class="sheet-book-cover" alt="Livro Dinheiro com Propósito">
                 <div class="sheet-book-info">
-                    <h3>Desenvolvimento Sistemático:<br>O Mapa da Autonomia</h3>
-                    <p>Saber o que fazer quando não se sabe o que fazer não é uma habilidade que aparece com o tempo. Não é algo que vem naturalmente com a maturidade. É construída. Em experiências concretas, em ambientes que exigem e apoiam ao mesmo tempo, em conversas que perguntam em vez de responder.</p>
-                    <p>O filho que você tem em casa agora, com a idade que ele tem hoje, está numa janela. Uma janela que tem uma duração, que não se repete e que vai definir muito mais do que qualquer nota jamais definirá. Este livro existe exatamente para tirar o desenvolvimento do campo da sensação e trazer para o campo da consciência.</p>
+                    <h3>Dinheiro com Propósito:<br>O Caminho da Paz Financeira</h3>
+                    <p>O buraco e o mapa. Quase todos os buracos em que tropeçamos foram criados por nós mesmos. Incomoda quando a renda mal dá para o básico, mas a verdadeira ansiedade não vem da falta de dinheiro: vem da falta de método e de clareza.</p>
+                    <p>Como professor de matemática e analista em desenvolvimento sistemático, estruturei este livro não com jargões intocáveis, mas como um mapa prático e aplicável. Você aprenderá a fechar o mês em paz, saindo do escuro do improviso. A vida financeira com propósito não é um salto mágico, é amadurecimento e comando sobre sua própria história.</p>
+                    
+                    <div class="promo-alert">
+                        <strong>🔥 Condição Exclusiva de Junho:</strong> Frete GRÁTIS para a versão física em todo o Brasil + 20% de Desconto usando o cupom <strong>VIDAPLENA</strong> no checkout.
+                    </div>
                     
                     <div class="sheet-actions">
-                        <a href="https://wa.me/5533999333644?text=Quero%20adquirir%20o%20Livro%20Físico%20Desenvolvimento%20Sistemático" target="_blank" class="btn-sheet-buy btn-sheet-physical">Adquirir Livro Físico</a>
-                        <a href="https://wa.me/5533999333644?text=Quero%20adquirir%20o%20E-book%20Desenvolvimento%20Sistemático" target="_blank" class="btn-sheet-buy btn-sheet-ebook">Adquirir E-Book</a>
+                        <a href="https://go.hotmart.com/D103710206P" target="_blank" class="btn-sheet-buy btn-sheet-physical">Adquirir Livro Físico</a>
+                        <a href="https://a.co/d/0ae2E7bl" target="_blank" class="btn-sheet-buy btn-sheet-ebook">Adquirir E-Book (Amazon)</a>
                     </div>
                 </div>
             </div>
@@ -205,7 +204,7 @@
     <footer class="site-footer">
         <div class="container">
             <h3 class="footer-logo">Vida<span>Plena</span></h3>
-            <p class="footer-desc">Uma bússola para o desenvolvimento familiar e crescimento espiritual baseado em princípios milenares.</p>
+            <p class="footer-desc">Uma bússola para o desenvolvimento familiar e crescimento baseado em princípios cristãos.</p>
             <div class="footer-links">
                 <a href="../../index.html">Página Inicial</a>
                 <a href="#">Sobre o Autor</a>
@@ -229,7 +228,7 @@
                 overlay.style.opacity = '1';
                 sheet.classList.add('active');
             }, 10);
-            document.body.style.overflow = 'hidden'; // Bloqueia scroll do fundo
+            document.body.style.overflow = 'hidden'; 
         }
 
         function closeBookSheet() {
@@ -240,7 +239,7 @@
             setTimeout(() => {
                 overlay.style.display = 'none';
             }, 300);
-            document.body.style.overflow = ''; // Libera scroll
+            document.body.style.overflow = ''; 
         }
 
         // Sistema de Acessibilidade
