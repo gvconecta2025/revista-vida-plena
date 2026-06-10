@@ -1,0 +1,156 @@
+/* =========================================
+   VARIÁVEIS GLOBAIS E IDENTIDADE VISUAL (VIDA PLENA)
+========================================= */
+:root {
+    --bg-color: #fdfbf7; /* Fundo levemente quente e acolhedor */
+    --primary: #4b5320; /* Verde-oliva escuro (Sobriedade/Crescimento) */
+    --accent: #8b3a2b; /* Terracota escuro (Acolhimento/Firmeza) */
+    --success: #22c55e; 
+    --warning: #eab308; 
+    --danger: #ef4444;
+    --text-main: #333333; 
+    --card-bg: #ffffff; 
+    --border: #e6e4df;
+    --container-width: 780px;
+    --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    --font-heading: "Georgia", serif;
+}
+
+/* =========================================
+   RESET E CONFIGURAÇÕES BÁSICAS
+========================================= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-main); background-color: var(--bg-color); color: var(--text-main); line-height: 1.8; font-size: 17px; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+.container { max-width: var(--container-width); margin: 0 auto; padding: 0 16px; }
+a { color: var(--accent); text-decoration: none; transition: all 0.2s ease; }
+a:hover { color: var(--primary); }
+
+/* =========================================
+   CABEÇALHO DA REVISTA (NAVBAR)
+========================================= */
+.magazine-navbar { background-color: #ffffff; border-bottom: 1px solid var(--border); padding: 15px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
+.magazine-container-nav { max-width: 1100px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; }
+.magazine-logo { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; color: var(--primary); letter-spacing: -0.5px; }
+.magazine-logo span { color: var(--accent); }
+
+.btn-group-wa {
+    background-color: var(--success); color: #fff; padding: 6px 12px; border-radius: 50px; font-weight: 600; font-size: 0.8rem; display: flex; align-items: center; gap: 5px; box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+}
+.btn-group-wa:hover { background-color: #16a34a; color: #fff; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4); }
+.btn-group-wa svg { width: 16px; height: 16px; fill: currentColor; }
+
+/* =========================================
+   PÁGINA INICIAL (VITRINE)
+========================================= */
+.home-hero { text-align: center; padding: 50px 0 30px; }
+.home-title { font-family: var(--font-heading); font-size: 2.2rem; color: var(--primary); margin-bottom: 15px; line-height: 1.2; }
+.home-subtitle { font-size: 1.1rem; color: #64748b; max-width: 600px; margin: 0 auto 40px; }
+
+.posts-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-bottom: 60px; }
+@media (min-width: 600px) { .posts-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.post-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; height: 100%; color: inherit; }
+.post-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.06); }
+.post-card-thumb { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid var(--border); }
+.post-card-body { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+.post-card-tag { font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--accent); margin-bottom: 8px; letter-spacing: 0.5px; }
+.post-card-title { font-family: var(--font-heading); font-size: 1.25rem; line-height: 1.3; margin-bottom: 10px; color: var(--primary); }
+.post-card-excerpt { font-size: 0.95rem; color: #475569; margin-bottom: 15px; flex-grow: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.post-card-footer { font-size: 0.85rem; color: #94a3b8; font-weight: 500; border-top: 1px solid var(--border); padding-top: 12px; margin-top: auto; }
+
+/* =========================================
+   PÁGINA DO ARTIGO (ADVERTORIAL)
+========================================= */
+.single-post { background: var(--card-bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 40px 0; margin-top: 0; }
+.post-header { text-align: center; margin-bottom: 30px; }
+.post-category { display: inline-block; background: #f1f5f9; color: var(--accent); font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 15px; }
+.post-title { font-family: var(--font-heading); font-size: 2.2rem; color: var(--primary); line-height: 1.2; margin-bottom: 15px; letter-spacing: -0.5px; }
+.post-subtitle { font-size: 1.15rem; color: #64748b; line-height: 1.5; margin-bottom: 20px; }
+.post-meta-profile { display: flex; align-items: center; justify-content: center; gap: 12px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 15px 0; margin-top: 20px; text-align: left; }
+.meta-author-photo { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid #e2e8f0; }
+.meta-info-text { line-height: 1.3; }
+.meta-author-name { font-weight: 700; color: var(--primary); font-size: 0.95rem; }
+.meta-date-read { font-size: 0.8rem; color: #64748b; }
+
+.post-featured-image { width: 100%; max-height: 450px; object-fit: cover; border-radius: 0; margin-bottom: 30px; }
+
+.post-content h2 { font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary); margin: 40px 0 15px; line-height: 1.3; }
+.post-content h3 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--text-main); margin: 30px 0 12px; }
+.post-content p { margin-bottom: 20px; color: #334155; }
+.post-content ul, .post-content ol { margin-bottom: 20px; padding-left: 20px; color: #334155; }
+.post-content li { margin-bottom: 8px; }
+
+.post-content blockquote { font-family: var(--font-heading); font-style: italic; font-size: 1.25rem; color: var(--accent); border-left: 4px solid var(--accent); padding-left: 20px; margin: 30px 0; background: #fdfbf7; padding: 20px; border-radius: 0 8px 8px 0; }
+
+.callout-box { background-color: #fffbeb; border: 1px solid #fde68a; border-left: 4px solid var(--warning); padding: 20px; border-radius: 0 8px 8px 0; margin: 30px 0; }
+.callout-box p { margin: 0; color: #92400e; font-weight: 500; }
+
+.post-ad-banner { margin: 40px 0; text-align: center; background: #f8fafc; padding: 20px; border-radius: 12px; border: 1px dashed #cbd5e1; }
+.post-ad-banner img { max-width: 100%; border-radius: 8px; margin: 0 auto 15px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+.btn-ad { display: inline-block; background-color: var(--accent); color: #fff; padding: 12px 24px; border-radius: 6px; font-weight: bold; text-decoration: none; transition: background 0.2s; }
+.btn-ad:hover { background-color: #702f23; color: #fff; }
+
+/* =========================================
+   BALCÃO DE NEGÓCIOS (FINAL DO ARTIGO)
+========================================= */
+.business-desk { margin-top: 60px; padding-top: 40px; border-top: 2px solid var(--border); }
+.desk-title { text-align: center; font-family: var(--font-heading); color: var(--primary); font-size: 1.8rem; margin-bottom: 30px; }
+
+.author-bio-card { background: var(--bg-color); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 40px; display: flex; gap: 20px; align-items: center; flex-direction: column; text-align: center; }
+@media (min-width: 600px) { .author-bio-card { flex-direction: row; text-align: left; } }
+.author-bio-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.1); flex-shrink: 0; }
+.author-bio-content h4 { font-size: 1.2rem; color: var(--primary); margin-bottom: 8px; }
+.author-bio-content p { font-size: 0.95rem; color: #475569; margin-bottom: 15px; line-height: 1.6; }
+.author-whatsapp-btn { display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: white; padding: 8px 16px; border-radius: 6px; font-weight: bold; font-size: 0.9rem; transition: background 0.2s; }
+.author-whatsapp-btn:hover { background: #128C7E; color: white; }
+.author-whatsapp-btn svg { width: 18px; height: 18px; fill: currentColor; }
+
+/* Accordion Livros */
+.accordion { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 40px; background: #fff; }
+.accordion-item { border-bottom: 1px solid var(--border); }
+.accordion-item:last-child { border-bottom: none; }
+.accordion-header { width: 100%; padding: 16px 20px; background: #f8fafc; border: none; text-align: left; font-weight: bold; color: var(--primary); font-size: 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background 0.2s; }
+.accordion-header:hover { background: #f1f5f9; }
+.accordion-header::after { content: '+'; font-size: 1.2rem; color: var(--accent); transition: transform 0.3s; }
+.accordion-header.active::after { content: '-'; }
+.accordion-content { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s ease; }
+.accordion-header.active + .accordion-content { padding: 20px; max-height: 500px; }
+.book-showcase { display: flex; gap: 20px; align-items: flex-start; flex-direction: column; }
+@media (min-width: 500px) { .book-showcase { flex-direction: row; } }
+.book-cover { width: 100px; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.book-info h5 { font-size: 1.1rem; color: var(--primary); margin-bottom: 8px; }
+.book-info p { font-size: 0.9rem; color: #475569; margin-bottom: 12px; line-height: 1.5; }
+.btn-buy-book { display: inline-block; background: var(--primary); color: #fff; padding: 6px 12px; border-radius: 4px; font-size: 0.85rem; font-weight: bold; }
+.btn-buy-book:hover { background: #3a4119; color: #fff; }
+
+/* =========================================
+   RODAPÉ
+========================================= */
+.site-footer { background-color: var(--primary); color: #e2e8f0; padding: 40px 0 20px; text-align: center; margin-top: 60px; }
+.footer-logo { font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin-bottom: 10px; }
+.footer-logo span { color: #fde68a; }
+.footer-desc { font-size: 0.9rem; max-width: 500px; margin: 0 auto 20px; color: #cbd5e1; }
+.footer-links { margin-bottom: 20px; }
+.footer-links a { color: #fff; font-size: 0.9rem; margin: 0 10px; opacity: 0.8; }
+.footer-links a:hover { opacity: 1; text-decoration: underline; color: #fde68a; }
+.footer-copy { font-size: 0.8rem; color: #94a3b8; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+
+/* =========================================
+   MEDIA QUERIES (DESKTOP)
+========================================= */
+@media (min-width: 768px) {
+    body { font-size: 18px; }
+    .container { padding: 0 24px; }
+    .magazine-navbar { padding: 20px 0; }
+    .magazine-container-nav { padding: 0 24px; }
+    .magazine-logo { font-size: 1.5rem; }
+    .btn-group-wa { padding: 8px 16px; font-size: 0.85rem; gap: 6px; }
+    .single-post { background: var(--card-bg); border: 1px solid var(--border); padding: 60px 50px; border-radius: 16px; margin-top: 40px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02); }
+    .post-title { font-size: 2.8rem; }
+    .post-subtitle { font-size: 1.3rem; max-width: 90%; margin: 0 auto; }
+    .post-meta-profile { padding: 20px 0; margin-top: 30px; justify-content: flex-start; padding-left: 10px; }
+    .post-featured-image { border-radius: 12px; margin-bottom: 40px; }
+    .post-content h2 { font-size: 1.8rem; }
+    .post-content h3 { font-size: 1.4rem; }
+}
