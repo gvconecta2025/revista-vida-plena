@@ -22,163 +22,120 @@
     <nav class="magazine-navbar">
         <div class="magazine-container-nav">
             <a href="../../index.html" class="magazine-logo">Vida<span>Plena</span></a>
-            <a href="https://chat.whatsapp.com/SEU_LINK_DO_GRUPO" target="_blank" class="btn-group-wa">
-                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-                Receber Artigos
-            </a>
+            <div class="share-header-buttons">
+                <a href="https://chat.whatsapp.com/SEU_LINK_DO_GRUPO" target="_blank" rel="noopener noreferrer" class="btn-group-wa" title="Receber novos artigos">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                    <span class="btn-group-text">Receber Artigos</span>
+                </a>
+            </div>
         </div>
     </nav>
 
+    <button onclick="shareThisPost()" class="floating-share-btn" title="Compartilhar este Artigo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+        <span>Compartilhar</span>
+    </button>
+
+    <div class="accessibility-toolbar">
+        <button onclick="changeFontSize('decrease')">A-</button>
+        <button onclick="changeFontSize('increase')">A+</button>
+    </div>
+
     <main class="container">
-        <article class="single-post">
+        <article class="single-post" style="position: relative;">
             
             <header class="post-header">
-                <span class="post-category">Família &bull; Princípios</span>
+                <div class="post-category">Família &bull; Princípios</div>
                 <h1 class="post-title">O silêncio que destrói lares: Por que não sabemos mais conversar com nossos filhos?</h1>
-                <p class="post-subtitle">Em um mundo repleto de notificações e telas, a verdadeira comunicação dentro de casa está se perdendo. Entenda como resgatar o diálogo e a conexão espiritual com sua casa.</p>
+                <p class="post-subtitle">Em um mundo repleto de notificações e telas, a verdadeira comunicação dentro de casa está se perdendo. Entenda como resgatar o diálogo e a conexão espiritual.</p>
                 
                 <div class="post-meta-profile">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop" class="meta-author-photo" alt="Luiz Henrique Magalhães">
-                    <div class="meta-info-text">
-                        <div class="meta-author-name">Por Luiz Henrique Magalhães</div>
-                        <div class="meta-date-read">Professor, Escritor e Mentor Familiar &bull; 5 min de leitura</div>
+                    <div class="meta-profile-left">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop" class="meta-author-photo" alt="Luiz Henrique Magalhães">
+                        <div class="meta-author-stars">★★★★★</div>
+                    </div>
+                    <div class="meta-profile-right">
+                        <div class="meta-row-1">Por <strong>Luiz Henrique Magalhães</strong></div>
+                        <div class="meta-row-2">Publicado em: Hoje</div>
+                        <div class="meta-row-3">Leitura: 4 minutos de leitura</div>
+                        <div class="meta-row-4" style="color: #dc2626; font-weight: 700; margin-top: 2px;">Expira em: 48 horas</div>
                     </div>
                 </div>
             </header>
 
-            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=2070&auto=format&fit=crop" class="post-featured-image" alt="Família distante na mesa">
+            <div class="main-media-wrapper">
+                <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=2070&auto=format&fit=crop" class="post-feature-img" alt="Família distante na mesa">
+            </div>
 
-            <div class="post-content">
+            <div id="article-body" class="post-content">
                 
-                <p>Entre em qualquer lar moderno no início da noite e você provavelmente testemunhará a mesma cena. O ambiente está silencioso, mas não se trata daquele silêncio restaurador que traz paz. É um silêncio pesado, quebrado apenas pelo ruído mecânico da televisão ou pelo estalo de dedos deslizando por telas de vidro. Cada membro da família está fisicamente no mesmo cômodo, mas habitando mundos perfeitamente isolados. Os pais respondem a e-mails; os filhos jogam ou conversam com desconhecidos a quilômetros de distância. A mesa do jantar, que historicamente foi o altar da comunhão familiar e da transmissão de sabedoria, tornou-se um balcão de conveniência onde as pessoas se cruzam sem se enxergarem. Esse isolamento doméstico opera como uma erosão silenciosa que vai desgastando os alicerces afetivos e espirituais do lar até que, um dia, os pais olham para os filhos e percebem que eles se tornaram completos estranhos dentro da própria casa.</p>
+                <p>Entre em qualquer lar moderno no início da noite e você provavelmente testemunhará a mesma cena. O ambiente está silencioso, mas não se trata daquele silêncio restaurador que traz paz. É um silêncio pesado, quebrado apenas pelo ruído mecânico da televisão ou pelo estalo de dedos deslizando por telas de vidro. Cada membro da família está fisicamente no mesmo cômodo, mas habitando mundos perfeitamente isolados.</p>
 
-                <blockquote>
+                <blockquote style="font-family: Georgia, serif; border-left: 4px solid var(--accent); background: #fdfbf7; padding: 20px 25px; margin: 35px 0; font-style: italic; font-size: 1.2rem; color: #334155; border-radius: 0 8px 8px 0; line-height: 1.6; text-align: left;">
                     "O maior perigo para uma família não são as tempestades que vêm de fora, mas a ausência de pontes que conectam os corações do lado de dentro."
                 </blockquote>
 
                 <h2>A Hiperconexão Externa e o Isolamento Interno</h2>
-                <p>A grande ilusão da era digital é acreditar que estamos mais conectados. Na realidade, estamos hiperinformados e profundamente isolados. Quando perguntamos a um filho "Como foi o seu dia?" e recebemos um monossílabo como "Legal", a maioria de nós desiste e volta a olhar para o próprio telefone. Justificamos a falta de persistência dizendo que "é apenas uma fase da adolescência" ou que "os jovens de hoje são naturalmente fechados". No entanto, as Escrituras nos alertavam claramente em Tiago 1:19 sobre o desenho perfeito das nossas relações: todo homem deve ser pronto para ouvir e tardio para falar. O erro crasso que cometemos na liderança do lar é inverter essa ordem divina ou negligenciar ambas as ações de forma sistemática. Nós quase nunca ouvimos nossos filhos para compreendê-los; ouvimos para responder, julgar ou aplicar uma correção imediata.</p>
+                <p>A grande ilusão da era digital é acreditar que estamos mais conectados. Na realidade, estamos hiperinformados e profundamente isolados. Quando perguntamos a um filho "Como foi o seu dia?" e recebemos um monossílabo como "Legal", a maioria de nós desiste e volta a olhar para o próprio telefone. O erro crasso que cometemos na liderança do lar é inverter a ordem de Tiago 1:19: nós quase nunca ouvimos nossos filhos para compreendê-los; ouvimos para responder ou aplicar uma correção imediata.</p>
 
-                <p>Quando um jovem percebe que qualquer tentativa de abrir o coração resultará em um sermão automático ou em uma cobrança ríspida, ele calcula o risco e decide que o preço do diálogo é alto demais. Ele se recolhe. Fecha a porta do quarto e tranca a porta da alma. O amadurecimento deles não espera a nossa conveniência; os anos voam e a janela de oportunidade para plantar as sementes da verdade se fecha um pouco a cada dia. É exatamente nesse vácuo de escuta intencional que o mundo encontra sua maior oportunidade de infiltração. Se o seu filho não encontra em casa um ouvido atento, paciente e guiado pelo Espírito Santo, ele buscará essa validação nos algoritmos das redes sociais ou em influenciadores digitais. O silêncio que se instala na sua casa não é neutro; ele está sendo preenchido por vozes estranhas que moldam os valores da próxima geração sem que você perceba.</p>
-
-                <div class="callout-box">
-                    <p>Ponto de Atenção: O silêncio prolongado entre pais e filhos não significa ausência de conflitos; muitas vezes, significa apenas que o filho desistiu de ser compreendido no único lugar onde deveria ser plenamente aceito.</p>
+                <div class="affiliate-ad-container" style="display: none; margin: 30px 0; text-align: center;">
+                    <a href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank" rel="noopener noreferrer" style="display: block; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                        <img src="URL_DA_IMAGEM_DO_PRODUTO" alt="Produto Recomendado" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto; transition: transform 0.3s;">
+                    </a>
+                </div>
+                <div class="callout" style="background-color: #fffbeb; border: 1px solid #fde68a; color: #92400e;">
+                    <strong>Ponto de Atenção:</strong> O silêncio prolongado entre pais e filhos não significa ausência de conflitos; muitas vezes, significa apenas que o filho desistiu de ser compreendido no único lugar onde deveria ser plenamente aceito.
                 </div>
 
                 <h2>Construindo Pontes onde o Mundo Cavou Abismos</h2>
-                <p>Resgatar a cumplicidade e a autoridade amorosa com os filhos exige método, intencionalidade e submissão ao direcionamento do Espírito Santo. Não podemos competir com o brilho sedutor da tecnologia usando apenas gritos ou proibições cegas. Precisamos construir um ecossistema doméstico onde a conversa em família seja mais atraente do que a distração digital. O primeiro passo prático é o estabelecimento rigoroso de "Zonas de Altar". Determine momentos inegociáveis no dia em que os celulares são completamente proibidos na mesa. O jantar precisa ser blindado. Não use esse momento precioso para cobrar tarefas da escola ou apontar falhas de comportamento; use-o para conhecer a alma do seu filho. Pergunte sobre os seus medos, suas descobertas, ou o que o fez rir hoje. Mostre uma curiosidade genuína por aquilo que habita o universo dele.</p>
+                <p>O primeiro passo prático é o estabelecimento rigoroso de "Zonas de Altar". Determine momentos inegociáveis no dia em que os celulares são completamente proibidos na mesa. O jantar precisa ser blindado. Não use esse momento precioso para cobrar tarefas da escola ou apontar falhas de comportamento; use-o para conhecer a alma do seu filho.</p>
 
-                <p>O segundo caminho fundamental é a prática da "Escuta Validativa". Quando seu filho decidir falar, resista ferozmente à tentação de interrompê-lo para dar uma lição de moral nos primeiros trinta segundos. Deixe-o concluir o raciocínio. Às vezes, o que o jovem precisa não é de uma solução imediata ou de uma fórmula lógica, mas da certeza de que os seus pais são um porto seguro forte o suficiente para suportar o peso das suas frustrações diárias. Por fim, o terceiro alicerce é a "Direção Espiritual Intencional". Ore com o seu filho de forma audível e específica. Quando os filhos escutam seus pais clamando a Deus por suas vidas, detalhando suas qualidades e pedindo sabedoria do alto para guiá-los, as barreiras invisíveis caem por terra. Eles entendem que a liderança do lar não emana de um ego autoritário, mas de um joelho que se dobra com reverência diante do Criador.</p>
-
-                <h2>O Próximo Passo é Seu</h2>
-                <p>A restauração do diálogo na sua casa não acontecerá por decreto real ou por um evento isolado, mas pela força da consistência diária. Não espere que seu filho tome a iniciativa de quebrar o gelo; o papel de pastor do lar pertence a você. Comece hoje mesmo, de forma despretensiosa. Ao desligar este ecrã, olhe nos olhos daqueles que Deus confiou às suas mãos, faça uma pergunta profunda e dedique-se a ouvir com paciência, graça e amor absoluto. O futuro espiritual da sua família depende diretamente das pontes que você decide construir no dia de hoje.</p>
+                <p>O próximo passo é seu. A restauração do diálogo na sua casa não acontecerá por decreto real ou por um evento isolado, mas pela força da consistência diária. O futuro espiritual da sua família depende diretamente das pontes que você decide construir no dia de hoje.</p>
             </div>
 
-            <section class="business-desk">
-                <h4 class="desk-title">Giro Editorial & Mentoria</h4>
+            <section class="business-desk" style="margin-top: 50px; border-top: 2px solid var(--border); padding-top: 40px;">
+                
+                <div class="pitch-box" style="background: linear-gradient(145deg, #4b5320, #2c3113); color: white; padding: 35px 25px; border-radius: 12px; text-align: center; box-shadow: 0 10px 30px rgba(75, 83, 32, 0.15);">
+                    <h2 style="color: #fde68a; margin-top: 0; font-size: 1.6rem; border: none; padding: 0;">Receba o Próximo Artigo em Primeira Mão</h2>
+                    <p style="font-size: 1.05rem; line-height: 1.6; color: #e2e8f0; margin-bottom: 25px;">Nossos ensaios sobre desenvolvimento familiar e princípios milenares não são publicados nas redes sociais. Eles são enviados exclusivamente no nosso grupo fechado de leitores no WhatsApp.</p>
+                    <a href="https://chat.whatsapp.com/SEU_LINK_DO_GRUPO" target="_blank" class="btn-pitch" style="display: inline-block; background: #25D366; color: white; font-weight: 800; font-size: 1.1rem; padding: 15px 30px; border-radius: 50px; text-decoration: none; text-transform: uppercase; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); transition: 0.2s;">Entrar no Grupo de Leitores</a>
+                </div>
 
-                <div class="author-bio-card">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop" class="author-bio-img" alt="Luiz Henrique Magalhães">
-                    <div class="author-bio-content">
-                        <h4>Fale com o Autor</h4>
-                        <p>Olá, sou o Professor Luiz Henrique. Se este artigo tocou o seu coração ou se você está enfrentando dificuldades específicas com o ambiente e o diálogo na sua casa, clique no botão ao lado para conversarmos diretamente pelo WhatsApp.</p>
-                        <a href="https://wa.me/5533999333644?text=Olá%20Professor%20Luiz,%20li%20o%20artigo%20sobre%20o%20silêncio%20nos%20lares%20e%20gostaria%20de%20conversar." target="_blank" class="author-whatsapp-btn">
-                            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-                            Chamar no WhatsApp
-                        </a>
+                <div class="author-block" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 15px; background-color: #fdfbf7; padding: 30px 20px; border-radius: 12px; margin-top: 40px; border: 1px solid var(--border);">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop" class="author-photo" alt="Luiz Henrique Magalhães" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
+                    <div class="author-info">
+                        <h4 style="margin-bottom: 8px; color: var(--primary); font-size: 1.25rem;">Luiz Henrique Magalhães</h4>
+                        <p style="margin-bottom: 20px; font-size: 0.95rem; color: #475569;">Professor, escritor e estudioso da teologia. Escreve semanalmente sobre como aplicar princípios milenares para fortalecer a família, a rotina e o caráter diante das angústias modernas.</p>
+                        <a href="https://wa.me/5533999333644?text=Olá%20Professor%20Luiz,%20li%20o%20artigo%20sobre%20o%20silêncio%20nos%20lares%20e%20gostaria%20de%20conversar." target="_blank" style="display: inline-flex; align-items: center; justify-content: center; background-color: var(--primary); color: #ffffff; font-weight: 700; font-size: 0.95rem; padding: 12px 20px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 12px rgba(75, 83, 32, 0.25);">Falar com o Autor</a>
                     </div>
                 </div>
 
-                <div class="post-ad-banner">
-                    <h3>Participe da Mentoria Familiar Vida Plena</h3>
-                    <p style="margin: 10px 0 20px; color: #475569; font-size: 0.95rem;">Receba direcionamento prático, ferramentas de desenvolvimento e acompanhamento guiado por princípios eternos para blindar os laços da sua casa.</p>
-                    <a href="https://wa.me/5533999333644?text=Quero%20conhecer%20a%20Mentoria%20Familiar%20Vida%20Plena" target="_blank" class="btn-ad">Inscrever-se na Mentoria</a>
-                </div>
-
-                <div class="accordion">
-                    <div class="accordion-item">
-                        <button class="accordion-header">Livro 1: Desenvolvimento Sistemático</button>
-                        <div class="accordion-content">
-                            <div class="book-showcase">
-                                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=1974&auto=format&fit=crop" class="book-cover" alt="Livro Desenvolvimento Sistemático">
-                                <div class="book-info">
-                                    <h5>Desenvolvimento Sistemático: O Mapa da Autonomia</h5>
-                                    <p>Um guia completo focado em estruturar o crescimento dos filhos de forma consciente. Ensina como construir as bases necessárias para que o jovem aprenda a caminhar com independência, responsabilidade e direção clara.</p>
-                                    <a href="https://wa.me/5533999333644?text=Quero%20adquirir%20o%20livro%20Desenvolvimento%20Sistemático" target="_blank" class="btn-buy-book">Adquirir Livro</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header">Livro 2: Rotina, Tempo e Método</button>
-                        <div class="accordion-content">
-                            <div class="book-showcase">
-                                <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?q=80&w=1974&auto=format&fit=crop" class="book-cover" alt="Livro Rotina Tempo e Método">
-                                <div class="book-info">
-                                    <h5>Rotina, Tempo e Método</h5>
-                                    <p>O manual prático definitivo para pais que buscam organizar a semana de estudos de seus filhos, gerenciar o tempo doméstico com sabedoria e implementar constância sem gerar atritos familiares.</p>
-                                    <a href="https://wa.me/5533999333644?text=Quero%20adquirir%20o%20livro%20Rotina,%20Tempo%20e%20Método" target="_blank" class="btn-buy-book">Adquirir Livro</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header">Livro 3: Dinheiro com Propósito</button>
-                        <div class="accordion-content">
-                            <div class="book-showcase">
-                                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop" class="book-cover" alt="Livro Dinheiro com Propósito">
-                                <div class="book-info">
-                                    <h5>Dinheiro com Propósito</h5>
-                                    <p>Descubra o caminho exato para a estabilidade e a Paz Financeira. Rompa com o ciclo do improviso e do medo, organizando a mordomia e o legado da sua família com base em propósitos reais e perenes.</p>
-                                    <a href="https://wa.me/5533999333644?text=Quero%20adquirir%20o%20livro%20Dinheiro%20com%20Propósito" target="_blank" class="btn-buy-book">Adquirir Livro</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="text-align: center; margin-top: 30px; border-top: 1px solid var(--border); padding-top: 20px;">
-                    <p style="font-size: 0.9rem; color: #64748b;">Esta é a nossa primeira edição. Conforme novos artigos forem publicados, eles se acumularão na nossa biblioteca central.</p>
-                    <a href="../../index.html" style="display: inline-block; margin-top: 10px; font-weight: bold; color: var(--accent);">← Ver Vitrine Completa na Home</a>
-                </div>
             </section>
         </article>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <h3 class="footer-logo">Vida<span>Plena</span></h3>
-            <p class="footer-desc">Uma bússola para o desenvolvimento familiar e crescimento espiritual baseado em princípios milenares.</p>
-            <div class="footer-links">
-                <a href="../../index.html">Página Inicial</a>
-                <a href="#">Sobre o Autor</a>
-                <a href="#">Contato</a>
-            </div>
-            <div class="footer-copy">
-                &copy; 2026 Luiz Henrique Magalhães. Todos os direitos reservados.
-            </div>
-        </div>
+    <footer class="site-footer" style="text-align: center; padding: 30px 0; margin-top: 40px; color: #64748b; font-size: 0.85rem; border-top: 1px solid var(--border); background-color: #ffffff;">
+        <div class="container"><p>&copy; 2026 Revista Vida Plena &bull; Sabedoria e Família.</p></div>
     </footer>
+
+    <script>
+        function changeFontSize(action) {
+            const elements = document.querySelectorAll('#article-body p, #article-body h2, #article-body h3, #article-body li, #article-body blockquote');
+            elements.forEach(el => {
+                let currentSize = window.getComputedStyle(el).getPropertyValue('font-size');
+                let currentSizeNum = parseFloat(currentSize);
+                if (action === 'increase') el.style.fontSize = (currentSizeNum + 1) + 'px'; 
+                else if (action === 'decrease') el.style.fontSize = (currentSizeNum - 1) + 'px';
+            });
+        }
+
+        function shareThisPost() {
+            const currentUrl = window.location.href;
+            window.open("https://wa.me/?text=" + encodeURIComponent("Li este artigo na Revista Vida Plena e lembrei de você: " + currentUrl), "_blank");
+        }
+    </script>
 
     <script type="module" src="../../metrics.js"></script>
 
-    <script>
-        document.querySelectorAll('.accordion-header').forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                
-                // Toggle a classe active no botão
-                button.classList.toggle('active');
-                
-                if (button.classList.contains('active')) {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                    content.style.padding = "20px";
-                } else {
-                    content.style.maxHeight = "0";
-                    content.style.padding = "0 20px";
-                }
-            });
-        });
-    </script>
 </body>
 </html>
